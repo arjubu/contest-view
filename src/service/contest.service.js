@@ -1,20 +1,15 @@
 import axios from "axios";
 
-const CONTEST_URL = "http://localhost:8001/contest/";
+const CONTEST_URL = "http://localhost:8082/";
 
 class ContestService {
   addContest(contest) {
-    return axios.post(CONTEST_URL + "createContest", contest, null);
+    // add the necessary axios here. hint: use axios.post
+    return axios.post(CONTEST_URL + "contest", contest);
   }
   listContest() {
-    return axios.get(CONTEST_URL + "contestList", null);
-  }
-
-  deleteContest(contestId) {
-    return axios.delete(`${CONTEST_URL}deleteContest/${contestId}`);
-  }
-  editContest(contest) {
-    return axios.put(`${CONTEST_URL}editContest`, contest);
+    // add the necessary axios here. hint: use axios.get
+    return axios.get(CONTEST_URL + "contest");
   }
 }
 

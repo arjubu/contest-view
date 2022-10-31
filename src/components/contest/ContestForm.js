@@ -1,4 +1,6 @@
 import React from "react";
+
+// this form takes all the necessary props and renders the form
 class ContestForm extends React.Component {
   render() {
     return (
